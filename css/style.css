@@ -174,7 +174,7 @@ nav .btnmenu, nav .logo {
   .card:nth-child(3) {
     top: 6rem;
   }
-  .card hr {
+  .card .hr {
     background-color: transparent;
     border-top: 5px dotted #9194a1;
   }
