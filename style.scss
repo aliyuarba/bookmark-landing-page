@@ -144,6 +144,10 @@ nav {
     &:nth-child(3) {
       top: 6rem;
     }
+    hr {
+      background-color: transparent;
+      border-top: 5px dotted $GrayishBlue;
+    }
   }
   .cards-panel {
     margin-bottom: 9rem;
