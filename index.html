@@ -5,231 +5,236 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Bookmark landing page</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Bookmark Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
   <script src="https://kit.fontawesome.com/d7be45defe.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <nav>
+  <nav class="py-3">
     <div class="container">
-      <div class="logo">
-        <img src="/images/logo-bookmark.svg" alt="">
-      </div>
+      <div class="d-flex align-items-center">
+        <div class="logo me-auto d-flex"> <img src="/images/logo-bookmark.svg" alt=""> </div>
 
-      <div class="btnmenu">
-        <div>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+        <div class="btnmenu d-sm-none"><img src="/images/icon-hamburger.svg" alt=""></div>
 
-      <div class="menu">
-        <a href="#features">features</a>
-        <a href="#pricing">pricing</a>
-        <a href="#contact">contact</a>
-        <hr>
-        <a href="#">login</a>
-
-        <div class="social-icon">
-          <i class="fab fa-twitter fa-2x"></i>
-          <i class="fab fa-facebook fa-2x"></i>
+        <div class="main-menu">
+          <div class="menu d-flex h-100 text-center">
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#Pricing">Pricing</a>
+            <a class="nav-link" href="#Contact">Contact</a>
+            <hr>
+            <a class="nav-link btn-fill-softred rounded-3" href="#Login">Login</a>
+            <div class="social mt-auto d-sm-none">
+              <i class="fab fa-facebook fa-2x me-3"></i>
+              <i class="fab fa-twitter fa-2x"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="hero">
+  <section id="hero" class="overflow-hidden" >
     <div class="container">
-      <article>
-        <h1>A simple bookmark manager</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit delectus, quas fuga nam quibusdam,
-          iste sunt mollitia minima officiis voluptates nesciunt nulla ipsam maxime illo eligendi voluptas libero
-          praesentium voluptatibus.</p>
-        <div>
-          <button>Get it on Chrome</button>
-          <button>Get it on Firefox</button>
-        </div>
-      </article>
-      <aside>
-        <img src="/images/illustration-hero.svg" alt="">
-      </aside>
+      <div class="row flex-md-row-reverse">
+        <aside class="col-md-7 d-flex align-items-center position-relative">
+          <div class="d-flex p-3 ">
+            <img src="/images/illustration-hero.svg" alt="" class="w-100">
+          </div>
+          <div class="bg-image"></div>
+        </aside>
+
+        <article class="col-md-5 d-flex flex-column justify-content-center py-5 text-center text-md-start">
+          <h1>Bookmark Landing Page</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium rem, vitae, quam incidunt iste animi alias culpa placeat nobis consequatur eos porro impedit! Itaque vitae quam, dolorem culpa nemo temporibus!</p>
+          <div class="d-flex align-items-center flex-column flex-md-row flex-wrap">
+            <button class="btn btn-fill-softblue mb-2 me-md-2">Get it on Chrome</button>
+            <button class="btn btn-fill-softblue mb-2">Get it on Firefox</button>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="features" id="features">
+  <section id="features">
     <div class="container">
-      <header>
+      <header class="py-3 pt-5">
         <h1>Features</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque esse obcaecati a doloremque temporibus, ea
-          eos totam nulla doloribus culpa, aut necessitatibus aperiam, sequi similique? Incidunt qui aliquam neque vero?
-        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, eligendi qui mollitia voluptate rem neque, quibusdam velit libero sapiente veritatis vitae totam hic tempora maxime doloremque voluptatem atque quam labore.</p>
       </header>
-      <div class="tabs-panel">
-        <div class="tabs-menu">
-          <a class="active">Simple Bookmarking</a>
-          <a>Speedy Searching</a>
-          <a>Easy Sharing</a>
+
+      <div class="tabs-panel d-flex flex-column">
+        <div class="tabs-link d-flex mx-auto flex-wrap justify-content-center">
+          <a class="nav-link active">Simple Bookmarking</a>
+          <a class="nav-link">Speedy Searching</a>
+          <a class="nav-link">Easy Sharing</a>
         </div>
 
-        <div  class="tabs">
-          <div id='tab1' class="active">
-            <aside>
-              <img src="/images/illustration-features-tab-1.svg" alt="">
-            </aside>
-            <article>
-              <h2>Bookmark in one click</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, facilis nostrum ea cumque
-                reprehenderit fugiat accusamus quaerat distinctio repellat. Placeat, aspernatur voluptatibus sequi
-                dignissimos neque dolor quae recusandae maxime consectetur.</p>
-              <button>More Info</button>
-            </article>
+        <div class="tabs">
+          <!-- tab1 -->
+          <div class="tab active">
+            <div class="row">
+              <aside class="col-md-7 d-flex align-items-center position-relative">
+                <div class="d-flex p-5">
+                  <img src="/images/illustration-features-tab-1.svg" alt="" class="w-100">
+                </div>
+                <div class="bg-image"></div>
+              </aside>
+              <article class="col-md-5 py-5 d-flex flex-column justify-content-center align-items-center align-items-md-start text-md-start text-center">
+                <h1>Simple Bookmarking</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quaerat deserunt itaque facilis, ut unde, aspernatur, fuga neque facere est consequatur rem delectus quibusdam impedit ullam accusantium? A, eligendi architecto.</p>
+                <button class="btn btn-fill-softblue">More Info</button>
+              </article>
+            </div>
           </div>
-
-          <div id="tab2">
-            <aside>
-              <img src="/images/illustration-features-tab-2.svg" alt="">
-            </aside>
-            <article>
-              <h2>Intelligent Search</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati maxime recusandae incidunt
-                assumenda placeat quis voluptatibus explicabo iusto voluptates quia, facere quod libero quasi debitis
-                nobis illo ex repellat?</p>
-              <button>More Info</button>
-            </article>
+          <!-- tabs2 -->
+          <div class="tab">
+            <div class="row">
+              <aside class="col-md-7 d-flex align-items-center position-relative">
+                <div class="d-flex p-5">
+                  <img src="/images/illustration-features-tab-2.svg" alt="" class="w-100">
+                </div>
+                <div class="bg-image"></div>
+              </aside>
+              <article class="col-md-5 py-5 d-flex flex-column justify-content-center align-items-center align-items-md-start text-md-start text-center">
+                <h1>Speedy Searching</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quaerat deserunt itaque facilis, ut unde, aspernatur, fuga neque facere est consequatur rem delectus quibusdam impedit ullam accusantium? A, eligendi architecto.</p>
+                <button class="btn btn-fill-softblue">More Info</button>
+              </article>
+            </div>
           </div>
-
-          <div id="tab3">
-            <aside>
-              <img src="/images/illustration-features-tab-3.svg" alt="">
-            </aside>
-            <article>
-              <h2>Share your bookmarks</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati maxime recusandae incidunt
-                assumenda
-                placeat quis voluptatibus explicabo iusto voluptates quia, facere quod libero quasi debitis nobis illo
-                ex
-                repellat?</p>
-              <button>More Info</button>
-            </article>
+          <!-- tabs3 -->
+          <div class="tab">
+            <div class="row">
+              <aside class="col-md-7 d-flex align-items-center position-relative">
+                <div class="d-flex p-5">
+                  <img src="/images/illustration-features-tab-3.svg" alt="" class="w-100">
+                </div>
+                <div class="bg-image"></div>
+              </aside>
+              <article class="col-md-5 py-5 d-flex flex-column justify-content-center align-items-center align-items-md-start text-md-start text-center">
+                <h1>Easy Sharing</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quaerat deserunt itaque facilis, ut unde, aspernatur, fuga neque facere est consequatur rem delectus quibusdam impedit ullam accusantium? A, eligendi architecto.</p>
+                <button class="btn btn-fill-softblue">More Info</button>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="pricing" class="pricing">
+  <section id="extension">
+    <div class="container">
+      <header class="pt-5 pb-3">
+        <h1>Download Extension</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates deleniti est libero hic perferendis tempore nobis aliquam itaque magnam sapiente excepturi ullam, reprehenderit laborum officiis labore earum?</p>
+      </header>
+
+      <div class="cards-panel d-flex flex-wrap">
+        <!-- chrome -->
+        <div class="card shadow text-nowrap mt-3 pt-3 mx-auto">
+          <div class="p-3 pb-0 d-flex flex-column align-items-center">
+            <img src="/images/logo-chrome.svg" alt="" class="mb-4">
+            <h5>Add to chrome</h5>
+            <p class="fs-6">Minimum version 62</p>
+          </div>
+          <hr class="m-0">
+          <div class="p-3">
+            <button class="btn btn-fill-softblue">Add & Install Extension</button>
+          </div>
+        </div>
+        <!-- firefox -->
+        <div class="card shadow text-nowrap mt-3 pt-3 mx-auto">
+          <div class="p-3 pb-0 d-flex flex-column align-items-center">
+            <img src="/images/logo-firefox.svg" alt="" class="mb-4">
+            <h5>Add to firefox</h5>
+            <p class="fs-6">Minimum version 62</p>
+          </div>
+          <hr class="m-0">
+          <div class="p-3">
+            <button class="btn btn-fill-softblue">Add & Install Extension</button>
+          </div>
+        </div>
+        <!-- opera -->
+        <div class="card shadow text-nowrap mt-3 pt-3 mx-auto">
+          <div class="p-3 pb-0 d-flex flex-column align-items-center">
+            <img src="/images/logo-opera.svg" alt="" class="mb-4">
+            <h5>Add to opera</h5>
+            <p class="fs-6">Minimum version 62</p>
+          </div>
+          <hr class="m-0">
+          <div class="p-3">
+            <button class="btn btn-fill-softblue">Add & Install Extension</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <header class="py-5">
+        <h1>Frequently asked question</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque ipsum inventore temporibus, incidunt dicta tempore, ducimus magnam hic harum amet nesciunt consequatur, voluptatem saepe esse molestiae id quam minima. Odio.</p>
+      </header>
+      <!-- accordion -->
+      <div class="accordion-container">
+        <div class="accordion">
+          <h5 class="d-flex align-items-center py-3 pe-2">What is bookmark?<i class="fas fa-angle-down ms-auto"></i></h5>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore adipisci commodi optio a ea veniam magnam aliquid error dolorem placeat totam repellat, laudantium, culpa beatae, pariatur consequatur molestias rem.</p>
+        </div>
+        <div class="accordion">
+          <h5 class="d-flex align-items-center py-3 pe-2">What is bookmark?<i class="fas fa-angle-down ms-auto"></i></h5>
+          <p>Lorem ipsum dolor sit</p>
+        </div>
+        <div class="accordion">
+          <h5 class="d-flex align-items-center py-3 pe-2">What is bookmark?<i class="fas fa-angle-down ms-auto"></i></h5>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore adipisci commodi optio a ea veniam magnam aliquid error dolorem placeat totam repellat, laudantium, culpa beatae, pariatur consequatur molestias rem.</p>
+        </div>
+        <div class="accordion">
+          <h5 class="d-flex align-items-center py-3 pe-2">What is bookmark?<i class="fas fa-angle-down ms-auto"></i></h5>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore adipisci commodi optio a ea veniam magnam aliquid error dolorem placeat totam repellat, laudantium, culpa beatae, pariatur consequatur molestias rem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-softblue py-5 text-light mt-5">
     <div class="container">
       <header>
-        <h1>Download the Extension</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat a deleniti aut, animi soluta inventore
-          dignissimos quos amet, provident tempore, temporibus facere quis rem voluptates. Suscipit quidem accusamus
-          deserunt laudantium.</p>
+        <h5 class="text-uppercase font-monospace">35.000+ already joined</h5>
+        <h1 class="mb-5">Stay up-to-date with what we are doing</h1>
+        <div class="form d-flex justify-content-center flex-wrap">
+          <input type="text" name="" id="email" class="rounded-3 p-2 m-2" placeholder="Enter your email addres">
+          <input type="button" value="Contact Us" class="btn btn-fill-softred m-2">
+        </div>
       </header>
-
-      <div class="cards-panel">
-        <div>
-          <div class="card">
-            <img src="/images/logo-chrome.svg" alt="">
-            <h4>Add to chrome</h4>
-            <p>Minimum version 62</p>
-            <hr>
-            <button>Add & install extension</button>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <img src="/images/logo-firefox.svg" alt="">
-            <h4>Add to firefox</h4>
-            <p>Minimum version 62</p>
-            <hr>
-            <button>Add & install extension</button>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <img src="/images/logo-opera.svg" alt="">
-            <h4>Add to opera</h4>
-            <p>Minimum version 62</p>
-            <hr>
-            <button>Add & install extension</button>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section id="faq" class="faq">
-    <div class="container">
-      <header>
-        <h1>Frequently Asked Question</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nulla cupiditate doloribus minima officia.
-          Tempora eius quisquam molestias omnis quibusdam esse accusamus magnam ut quis incidunt, porro voluptate optio
-          quas?</p>
-      </header>
+  <footer class="bg-darkblue py-5">
+    <div class="container d-sm-flex align-items-center">
+      <div class="logo text-center d-flex justify-content-center"><img src="/images/logo-bookmark-copy.svg" alt=""></div>
 
-      <div class="accordion">
-        <div> 
-          <h4>What is bookmark? <i class="fas fa-chevron-down"></i></h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aperiam quasi aliquam ipsum sapiente sit,
-            harum, vitae quaerat reprehenderit placeat maxime expedita quia corporis. Adipisci mollitia cumque alias
-            esse dignissimos!</p>
-        </div>
-        <div>
-          <h4>How can I request a new browser? <i class="fas fa-chevron-down"></i></h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro atque non velit cum, ad distinctio optio,
-            molestias harum dolore saepe iste libero possimus neque hic consectetur voluptatum aliquam tempore
-            asperiores.</p>
-        </div>
-        <div>
-          <h4>Is there a mobile app? <i class="fas fa-chevron-down"></i></h4>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum atque nulla recusandae? Fuga quidem
-            voluptatibus suscipit consectetur dolores corrupti, deleniti quas incidunt odit facilis officiis. Repellat
-            optio amet possimus qui!</p>
-        </div>
-        <div>
-          <h4>What about others Chromium browser? <i class="fas fa-chevron-down"></i></h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempore ad doloribus expedita
-            explicabo ipsam in harum iure et facilis perspiciatis numquam illo minus animi hic optio non, vero natus.
-          </p>
-        </div>
+      <div class="footer-menu ms-sm-3 text-center text-white d-sm-flex my-4 my-sm-0">
+        <a class="nav-link" href="#features">FEATURES</a>
+        <a class="nav-link" href="#extension">PRICING</a>
+        <a class="nav-link" href="#faq">FAQ</a>
       </div>
 
-      <button>More Info</button>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h3>35.000+ already joined</h3>
-      <h1>Stay up-to-date what we are doing</h1>
-      <div class="form">
-        <input type="email" name="email" id="email" placeholder="email">
-        <button>Contact Us</button>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="logo">
-        <img src="/images/logo-bookmark-copy.svg" alt="">
-      </div>
-      <div class="footer-menu">
-        <a href="#features">features</a>
-        <a href="#pricing">pricing</a>
-        <a href="#contact">contact</a>
-      </div>
-      <div class="social">
-        <i class="fab fa-facebook fa-2x"></i>
+      <div class="social ms-auto text-center d-flex justify-content-center">
+        <i class="fab fa-facebook fa-2x me-3"></i>
         <i class="fab fa-twitter fa-2x"></i>
       </div>
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="app.js"></script>
 </body>
 

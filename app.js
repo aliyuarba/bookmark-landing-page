@@ -1,17 +1,25 @@
-document.querySelector('.btnmenu').addEventListener('click', function(){
-  this.classList.toggle('active');
-  document.querySelector('.menu').classList.toggle('active');
-})
-
-$('.accordion i').click(function(){
-  $(this).parents().parents().toggleClass('active');
-  $(this).parents().parents().siblings().removeClass('active');
-})
-
-$('.tabs-menu a').click(function(){
+$(".tabs-link a").click(function () {
   let target = $(this).index() + 1;
-  $(`#tab${target}`).addClass("active");
-  $(`#tab${target}`).siblings().removeClass("active");
-  $(this).addClass('active');
+  $(`.tab:nth-child(${target})`).addClass("active");
+  $(`.tab:nth-child(${target})`).siblings().removeClass("active");
+  $(this).addClass("active");
   $(this).siblings().removeClass("active");
+});
+
+$(".accordion h5").click(function () {
+  let panel = this.nextElementSibling;
+
+  if ($(this).parent().hasClass("active")) {
+    $(this).next().css("height", "0");
+  } else {
+    $(this).next().css("height", `${panel.scrollHeight + 16}px`);
+    $(this).parent().siblings().children("p").css("height", "0");
+  }
+
+  $(this).parent().toggleClass("active");
+  $(this).parent().siblings().removeClass("active");
+});
+
+$('.btnmenu').click(function(){
+  $('.main-menu').toggleClass('active');
 })
