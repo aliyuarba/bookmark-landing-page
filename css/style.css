@@ -3,7 +3,6 @@
 ***** set default *****
 ********************* */
 * {
-  outline: 1px solid red;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
