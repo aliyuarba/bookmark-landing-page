@@ -88,6 +88,12 @@ nav .btnmenu, nav .logo {
 /* ***********************
 ***********HERO***********
 ************************* */
+@media (min-width: 768px) {
+  #hero article {
+    width: 50%;
+  }
+}
+
 .bg-image {
   width: 150%;
   height: 50%;
